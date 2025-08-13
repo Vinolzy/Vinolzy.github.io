@@ -1,1 +1,391 @@
-<h1>This is my primary blog</h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李致远 - 嵌入式技术博客集合</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            background: #f8f9fa;
+            color: #333;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .contact {
+            font-size: 1em;
+            opacity: 0.8;
+        }
+        
+        .category {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .category:last-child {
+            border-bottom: none;
+        }
+        
+        .category-header {
+            background: #34495e;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .blog-list {
+            padding: 20px 30px;
+        }
+        
+        .blog-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .blog-item:last-child {
+            border-bottom: none;
+        }
+        
+        .blog-item a {
+            text-decoration: none;
+            color: #2c3e50;
+            display: block;
+            transition: color 0.3s ease;
+        }
+        
+        .blog-item a:hover {
+            color: #3498db;
+        }
+        
+        .stats {
+            background: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .blog-list {
+                padding: 15px 20px;
+            }
+            
+            .category-header {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>李致远</h1>
+            <div class="subtitle">嵌入式技术博客集合</div>
+            <div class="contact">vinolzy@163.com</div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">FreeRTOS实时操作系统</div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128135347">基于Cortex-M的RTOS上下文切换详解及FreeRTOS实例</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128207406">FreeRTOS第一个任务的创建和调度详解(SVC异常)</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/130694526">FreeRTOS开启任务调度函数xPortStartScheduler详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128105515">FreeRTOS遍历所有任务的TCB并获得栈的最大使用量</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">硬件设计实例</div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/136437752">嵌入式硬件设计实例：基于STM32的流水灯原理图和PCB设计</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">开发工具与系统</div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/134621320">单片机(STM32,GD32,NXP等)中BootLoader的严谨实现详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/132362556">嵌入式IDE(1)：IAR中ICF链接文件详解和实例分析</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/132715348">嵌入式IDE(2)：KEIL中SCF分散加载链接文件详解和实例分析</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/130168550">GCC编译优化选项及汇编优化实例</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">ARM架构与处理器基础</div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128191341">ARM基础(1)：Cortex-M3的核心寄存器和特殊寄存器</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128195825">ARM基础(2)：模式和特权等级(User/Thread mode和Privileged level)</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131146513">ARM基础(3)：MPU内存保护单元详解及例子</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131146518">ARM基础(4)：L1 Cache之I-Cache和D-cache详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131178276">ARM基础(5)：内存屏障的必要性、内存类型和内存排序</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131949061">ARM基础(6)：内存屏障指令之DMB、DSB和ISB详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/132030663">ARM进阶：内存屏障(DMB/DSB/ISB)的20个使用例子详解</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">ARM异常处理与中断</div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128182195">ARM异常处理(1)：异常类型、优先级分组和异常向量表</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128185298">ARM异常处理(2)：中断的输入和挂起的6种情况分析</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128185998">ARM异常处理(3)：Bus faults、Memory management faults、Usage faults、Hard faults详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128190383">ARM异常处理(4)：SVC和PendSV的作用详解</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">I.MX RT1170深度解析</div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/134672293">I.MX RT1170双核学习(1)：双核通信之MU消息单元详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/134657136">I.MX RT1170双核学习(2)：双核相互激活和启动流程</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/134724405">I.MX RT1170双核学习(3)：多核管理之MCMGR源码分析详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/134771838">I.MX RT1170双核学习(4)：FreeRTOS之消息缓冲区(Message Buffer)双核通信详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131237255">I.MX RT1170之FlexSPI(1)：FlexSPI功能框图和特性</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131264182">I.MX RT1170之FlexSPI(2)：LUT表格的组成和FlexSPI结构体配置</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131526619">I.MX RT1170之FlexSPI(3)：NOR Flash手册分析和参数配置详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131526625">I.MX RT1170之FlexSPI(4)：HyperRAM手册分析和参数配置详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/130915148">I.MX RT1170：如何在SRAM/SDRAM运行程序</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/139358625">I.MX RT1170之MIPI CSI摄像头初始化和显示流程详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/139332153">I.MX RT1170之MIPI DSI初始化和显示流程详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/130938817">I.MX RT1170加密启动详解(1)：加密Boot镜像组成</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/130959328">I.MX RT1170加密启动详解(2)：HAB认证原理</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/130997318">I.MX RT1170加密启动详解(3)：HAB加密启动原理</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/130998207">I.MX RT1170加密启动详解(4)：OTFAD XIP加密运行代码</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">通信协议与接口</div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/132773831">USB学习(1)：USB基础之接口类型、协议标准、引脚分布、架构、时序和数据格式</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/134000672">USB学习(2)：USB端点和传输协议(数据包、事物)详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/134046115">USB学习(3)：USB描述符和USB类设备</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/132758946">SD、SDIO和MMC接口基础和规范介绍</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/133862610">SD/SDIO(1)：SD总线协议介绍</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/132797300">SD/SDIO(2)：SDIO协议介绍和初始化流程</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/134486312">GPIO模式详解：推挽/开漏/浮空/上拉/下拉/施密特(迟滞)输入</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/127921514">BLE学习(1)：蓝牙协议栈的介绍</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/127924344">BLE学习(2)：广播包报文格式详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/127944589">BLE学习(3)：ATT和GATT详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/127972081">BLE学习(4)：蓝牙地址类型和设备的隐私</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">网络与图形界面</div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128261078">LwIP源码分析(1)：软件定时器</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128264357">LwIP源码分析(2)：tcpip_init和tcpip_thread函数分析</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128273607">LwIP源码分析(3)：内存堆和内存池代码详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128348971">LwIP源码分析(4)：netif网卡驱动初始化代码分析</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131024644">LVGL学习(1)：中文字体的转换和汉字显示</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131024708">LVGL学习(2)：图片的转换和显示</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131058317">LVGL学习(3)：页面切换原理和页面管理实现</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131097596">LVGL学习(4)：输入设备的四种类型及物理按键的实现</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131146111">LVGL学习(5)：物理按键切换焦点之焦点保存和恢复</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">DMA与信息安全</div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128524317">NXP EDMA学习(1)：TCD寄存器详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128552485">NXP EDMA学习(2)：串口eDMA接收和发送流程详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/128564326">NXP EDMA学习(3)：Scatter/Gather模式之串口循环缓冲区的实现</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131798620">MD5加密(1)：MD5基础知识和计算过程</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/131880372">MD5加密(2)：MD5代码实现详解</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/132118458">AES加密(1)：AES基础知识和计算过程</a>
+                </div>
+                <div class="blog-item">
+                    <a href="https://lizhiyuan.blog.csdn.net/article/details/132250183">AES加密(2)：AES代码实现解析</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
